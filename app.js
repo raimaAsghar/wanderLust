@@ -85,6 +85,12 @@ app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
+// Root route (homepage)
+app.get("/", (req, res) => {
+  res.render("index"); // this will render views/index.ejs
+});
+
+
 // all wrong routes
 app.use((req, res, next) => {
   next(new ExpressError(404, "Page Not Found!"));
