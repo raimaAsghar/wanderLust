@@ -1,6 +1,5 @@
-if (process.env.NODE_ENV != "production") {
-  require("dotenv").config();
-}
+ require("dotenv").config();
+
 
 const express = require("express");
 const app = express();
@@ -96,6 +95,8 @@ app.use((err, req, res, next) => {
   res.status(statusCode).render("./error.ejs", { message });
 });
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+const PORT = process.env.PORT || 3000; // use Railway's port or fallback to 3000 locally
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
