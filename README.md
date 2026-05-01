@@ -234,6 +234,6 @@ Image served via Cloudinary CDN
 ---
  
 <div align="center">
-  <p>Agar yeh project pasand aaya to ⭐ star zaroor dein!</p>
+  <p>If you found this project helpful, please ⭐ star the repo!</p>
 </div>
  
